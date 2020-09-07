@@ -60,13 +60,13 @@ i {
   position: relative;
   display: grid;
   outline: 5px ridge #5f9ea0;
-  max-width: 400px;
+  max-width: 300px;
   min-height: 300px;
   width: auto;
   height: auto;
   margin: auto;
-  grid-template-columns: repeat(40, 1fr);
-  grid-template-rows: repeat(40, 1fr);
+  grid-template-columns: repeat(30, 1fr);
+  grid-template-rows: repeat(30, 1fr);
 }
 
 .grid-image {

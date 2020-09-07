@@ -21,3 +21,6 @@ function App() {
 }
 
 export default App;
+
+//TODO: change background sprite
+//TODO: change grid size

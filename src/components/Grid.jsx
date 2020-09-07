@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Buttons from "../components/Buttons";
 import { DataContext } from "../context";
-import tiger from "../images/tiger.png";
+import pika from "../images/pika.png";
 
 const Grid = () => {
   const context = useContext(DataContext);
@@ -10,12 +10,7 @@ const Grid = () => {
   return (
     <div>
       <div className="grid-wrapper">
-        <img
-          id="grid-image"
-          className="grid-image"
-          src={tiger}
-          alt="grid-img"
-        />
+        <img id="grid-image" className="grid-image" src={pika} alt="grid-img" />
         {cells.map((_, i) => {
           return (
             <div

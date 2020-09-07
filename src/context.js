@@ -4,7 +4,7 @@ export const DataContext = React.createContext();
 
 const ContextProvider = (props) => {
   //--> GENERATE ARRAY OF 1600 CELLS
-  const initialCells = Array.from({ length: 1600 });
+  const initialCells = Array.from({ length: 900 });
 
   //--> STATES
   const [currentColor, setCurrentColor] = useState("#5f9ea0");
