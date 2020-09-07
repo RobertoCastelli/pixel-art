@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 export const DataContext = React.createContext();
 
 const ContextProvider = (props) => {
@@ -47,13 +48,10 @@ const ContextProvider = (props) => {
 
   //--> TOGGLE ON - OFF BUTTON AND SPRITE VISIBILITY
   const handleToggle = () => {
+    const gridImage = document.getElementById("grid-image");
     isToggleOn
-      ? document
-          .getElementById("grid-image")
-          .setAttribute("style", "visibility: visible")
-      : document
-          .getElementById("grid-image")
-          .setAttribute("style", "visibility: hidden");
+      ? gridImage.setAttribute("style", "visibility: visible")
+      : gridImage.setAttribute("style", "visibility: hidden");
     setIsToggleOn(!isToggleOn);
   };
 

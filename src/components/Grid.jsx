@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { DataContext } from "../context";
 import Buttons from "../components/Buttons";
+import { DataContext } from "../context";
 import tiger from "../images/tiger.png";
 
 const Grid = () => {
