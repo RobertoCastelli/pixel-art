@@ -33,6 +33,10 @@ button:active {
   transform: scale(1.1);
 }
 
+h2 {
+  margin-bottom: 0;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -74,7 +78,7 @@ button:active {
 }
 
 .color-picker-wrapper {
-  margin: 0;
+  margin: 0.5rem;
 }
 
 .color-picker {
@@ -86,7 +90,11 @@ button:active {
 
 .color-history-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  margin: auto;
+  width: 50%;
+  text-align: center;
 }
 
 .color-history {

@@ -3,7 +3,10 @@ import React from "react";
 const Header = () => {
   return (
     <header>
-      <h1>PIXEL ART</h1>
+      <h2>PIXEL ART</h2>
+      <div>
+        <small>double click to cancel a pixel color or hisotry palette</small>
+      </div>
     </header>
   );
 };

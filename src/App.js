@@ -4,7 +4,6 @@ import Footer from "./components/Footer";
 import Grid from "./components/Grid";
 import ColorPicker from "./components/ColorPicker";
 import ContextProvider from "./context";
-import ColorHistory from "./components/ColorHistory";
 
 function App() {
   return (
@@ -13,7 +12,6 @@ function App() {
         <ContextProvider>
           <Header />
           <ColorPicker />
-          <ColorHistory />
           <Grid />
         </ContextProvider>
       </div>
