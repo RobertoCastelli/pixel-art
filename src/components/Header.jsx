@@ -5,7 +5,7 @@ const Header = () => {
     <header>
       <h2>PIXEL ART</h2>
       <div>
-        <small>double click to cancel a pixel color or hisotry palette</small>
+        <small>double click to cancel a pixel or history palette</small>
       </div>
     </header>
   );
