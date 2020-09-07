@@ -17,7 +17,8 @@ button {
   border: 1px outset cadetblue;
   background-color: cadetblue;
   color: white;
-  padding: 1rem;
+  width: 80px;
+  padding: 0.5rem;
   margin: 1rem;
   text-transform: uppercase;
   transition: all 0.5s ease;
@@ -37,6 +38,10 @@ h2 {
   margin-bottom: 0;
 }
 
+i {
+  color: #999999;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -52,6 +57,7 @@ h2 {
 }
 
 .grid-wrapper {
+  position: relative;
   display: grid;
   outline: 5px ridge #5f9ea0;
   max-width: 400px;
@@ -61,9 +67,13 @@ h2 {
   margin: auto;
   grid-template-columns: repeat(40, 1fr);
   grid-template-rows: repeat(40, 1fr);
-  background-image: url("./images/tiger.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+
+.grid-image {
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  z-index: -1;
 }
 
 .grid {

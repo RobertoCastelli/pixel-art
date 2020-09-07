@@ -1,13 +1,21 @@
 import React, { useContext } from "react";
 import { DataContext } from "../context";
+import Buttons from "../components/Buttons";
+import tiger from "../images/tiger.png";
 
 const Grid = () => {
   const context = useContext(DataContext);
-  const { cells, updateCell, resetCell, clearAllCells } = context;
+  const { cells, updateCell, resetCell } = context;
 
   return (
     <div>
       <div className="grid-wrapper">
+        <img
+          id="grid-image"
+          className="grid-image"
+          src={tiger}
+          alt="grid-img"
+        />
         {cells.map((_, i) => {
           return (
             <div
@@ -20,7 +28,7 @@ const Grid = () => {
           );
         })}
       </div>
-      <button onClick={clearAllCells}>clear all</button>
+      <Buttons />
     </div>
   );
 };
