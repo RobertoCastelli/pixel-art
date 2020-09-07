@@ -6,7 +6,7 @@ const ColorPicker = () => {
   const { currentColor, setCurrentColor } = context;
 
   return (
-    <div>
+    <div className="color-picker-wrapper">
       <input
         type="color"
         className="color-picker"

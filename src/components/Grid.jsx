@@ -3,7 +3,7 @@ import { DataContext } from "../context";
 
 const Grid = () => {
   const context = useContext(DataContext);
-  const { cells, updateCell, resetCell } = context;
+  const { cells, updateCell, resetCell, clearAllCells } = context;
 
   return (
     <div>
@@ -20,6 +20,7 @@ const Grid = () => {
           );
         })}
       </div>
+      <button onClick={clearAllCells}>clear all</button>
     </div>
   );
 };

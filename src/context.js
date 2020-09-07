@@ -2,7 +2,7 @@ import React, { useState } from "react";
 export const DataContext = React.createContext();
 
 const ContextProvider = (props) => {
-  const initialCells = Array.from({ length: 900 });
+  const initialCells = Array.from({ length: 1600 });
 
   const [currentColor, setCurrentColor] = useState("#5f9ea0");
   const [cells] = useState(initialCells);
@@ -17,6 +17,10 @@ const ContextProvider = (props) => {
     document.getElementById(id).removeAttribute("style");
   };
 
+  const clearAllCells = () => {
+    cells.map((_, id) => document.getElementById(id).removeAttribute("style"));
+  };
+
   return (
     <div>
       <DataContext.Provider
@@ -26,6 +30,7 @@ const ContextProvider = (props) => {
           cells,
           updateCell,
           resetCell,
+          clearAllCells,
         }}
       >
         {props.children}
