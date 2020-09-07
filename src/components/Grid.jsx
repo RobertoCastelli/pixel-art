@@ -1,24 +1,25 @@
-import React from "react";
-const Grid = () => {
-  //--> create an array of 600 squares with a state of false
-  const cells = Array.from({ length: 600 }, () => ({
-    state: false,
-  }));
+import React, { useContext } from "react";
+import { DataContext } from "../context";
 
-  const updateCell = (cell) => {
-    cell.state = true;
-  };
+const Grid = () => {
+  const context = useContext(DataContext);
+  const { cells, updateCell, resetCell } = context;
 
   return (
-    <div className="grid-wrapper">
-      {cells.map((cell, id) => (
-        <div
-          key={id}
-          style={{ backgroundColor: cell.state ? "red" : "blue" }}
-          className="grid"
-          onClick={updateCell(cell)}
-        ></div>
-      ))}
+    <div>
+      <div className="grid-wrapper">
+        {cells.map((_, i) => {
+          return (
+            <div
+              id={i}
+              key={i}
+              className="grid"
+              onClick={() => updateCell(i)}
+              onDoubleClick={() => resetCell(i)}
+            ></div>
+          );
+        })}
+      </div>
     </div>
   );
 };

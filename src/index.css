@@ -31,11 +31,13 @@ body {
 .grid-wrapper {
   display: grid;
   outline: 5px ridge #5f9ea0;
-  width: 50vw;
-  height: 50vh;
+  max-width: 400px;
+  min-height: 300px;
+  width: auto;
+  height: auto;
   margin: auto;
   grid-template-columns: repeat(30, 1fr);
-  grid-template-rows: repeat(20, 1fr);
+  grid-template-rows: repeat(30, 1fr);
 }
 
 .grid {
@@ -55,4 +57,7 @@ body {
   border: none;
   width: 50px;
   height: 50px;
+}
+.green {
+  background-color: green;
 }
