@@ -3,7 +3,13 @@ import { DataContext } from "../context";
 
 const Buttons = () => {
   const context = useContext(DataContext);
-  const { isToggleOn, clearAllCells, handleToggle } = context;
+  const {
+    isToggleOn,
+    clearAllCells,
+    handleToggle,
+    handleSelect,
+    dataImages,
+  } = context;
 
   return (
     <div>
@@ -11,6 +17,15 @@ const Buttons = () => {
       <button onClick={handleToggle}>
         {isToggleOn ? "sprite on" : "sprite off"}
       </button>
+      <select onChange={(e) => handleSelect(e.target.value)}>
+        {dataImages.map((img, id) => {
+          return (
+            <option key={id} value={img.src}>
+              {img.name}
+            </option>
+          );
+        })}
+      </select>
     </div>
   );
 };

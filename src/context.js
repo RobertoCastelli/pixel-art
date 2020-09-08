@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { dataImages } from "./dataImages";
 
 export const DataContext = React.createContext();
 
@@ -11,6 +12,7 @@ const ContextProvider = (props) => {
   const [cells] = useState(initialCells);
   const [colorHistory, setColorHistory] = useState(["#ffffff", "#000000"]);
   const [isToggleOn, setIsToggleOn] = useState(false);
+  const [images, setImages] = useState([dataImages[0].src]);
 
   //--> CHANGE COLOR AND ADD IT TO HISTORY
   const updateCell = (id) => {
@@ -55,6 +57,9 @@ const ContextProvider = (props) => {
     setIsToggleOn(!isToggleOn);
   };
 
+  //--> GET SELECTED BACKGROUND IMAGE
+  const handleSelect = (e) => setImages(e);
+
   //--> RENDER
   return (
     <div>
@@ -70,6 +75,9 @@ const ContextProvider = (props) => {
           resetColorHistory,
           isToggleOn,
           handleToggle,
+          dataImages,
+          images,
+          handleSelect,
         }}
       >
         {props.children}
